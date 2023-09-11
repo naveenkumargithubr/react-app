@@ -108,7 +108,7 @@ class App extends Component {
   render() {
     // now we call the getFilteredProjects method here
     const filteredProjects = this.getFilteredProjects();
-
+    const { activeTabId } = this.state; //to show the style of each tab
     return (
       <div className="app-container">
         <Header />
@@ -124,7 +124,8 @@ class App extends Component {
             <TabItem
               key={tabDetails.tabId}
               tabDetails={tabDetails}
-              updateActiveTabId={this.updateActiveTabId}
+              updateActiveTabId={this.updateActiveTabId} // chnage one tab to another tab
+              isActive={tabDetails.tabId === activeTabId} //change the styles of tab
             />
           ))}
         </ul>

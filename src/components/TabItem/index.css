@@ -19,11 +19,6 @@
   cursor: pointer;
 }
 
-.tab-btn:hover {
-  background-color: #54687b;
-  color: aliceblue;
-}
-
 @media screen and (min-width: 992px) {
   .tab-btn {
     font-size: 24px;
